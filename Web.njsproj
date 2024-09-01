@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5730e29e-b24e-4e90-a646-8cc6bc6971dd}</ProjectGuid>
+    <ProjectHome>
+    </ProjectHome>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <EnableTypeScript>true</EnableTypeScript>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">17.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Web</Name>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="environment\development.env" />
+    <Content Include="environment\production.env" />
+    <Content Include="keepAsset.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="server.js" />
+    <Content Include="server_webpack.js" />
+    <Content Include="src\assets\audio\au_done.mp3" />
+    <Content Include="src\assets\audio\au_erased.mp3" />
+    <Content Include="src\assets\audio\au_error.mp3" />
+    <Content Include="src\assets\audio\au_event.mp3" />
+    <Content Include="src\assets\audio\au_hit.mp3" />
+    <Content Include="src\assets\audio\au_hit2.mp3" />
+    <Content Include="src\assets\audio\au_message.wav" />
+    <Content Include="src\assets\audio\au_message2.mp3" />
+    <Content Include="src\assets\audio\au_toast_done.mp3" />
+    <Content Include="src\assets\audio\au_toast_error.mp3" />
+    <Content Include="src\assets\audio\au_toast_notification.wav" />
+    <Content Include="src\assets\audio\au_toast_warning.mp3" />
+    <Content Include="src\assets\audio\start.mp3" />
+    <Content Include="src\assets\audio\stop.mp3" />
+    <Content Include="src\assets\audio\success.mp3" />
+    <Content Include="src\assets\fonts\open_sans.woff" />
+    <Content Include="src\assets\fonts\yekan_web.woff" />
+    <Content Include="src\assets\images\anim_api.gif" />
+    <Content Include="src\assets\images\bag-coin.png" />
+    <Content Include="src\assets\images\ic_bazaar.png" />
+    <Content Include="src\assets\images\ic_cardbank.png" />
+    <Content Include="src\assets\images\ic_changes.png" />
+    <Content Include="src\assets\images\ic_close.png" />
+    <Content Include="src\assets\images\ic_close_focus.png" />
+    <Content Include="src\assets\images\ic_close_on.png" />
+    <Content Include="src\assets\images\ic_coin.png" />
+    <Content Include="src\assets\images\ic_comment_add.png" />
+    <Content Include="src\assets\images\ic_default_img.png" />
+    <Content Include="src\assets\images\ic_dollar.png" />
+    <Content Include="src\assets\images\ic_file.png" />
+    <Content Include="src\assets\images\ic_fingerprint.png" />
+    <Content Include="src\assets\images\ic_instagram_scratch.png" />
+    <Content Include="src\assets\images\ic_iodynamic_default.png" />
+    <Content Include="src\assets\images\ic_iodynamic_white.png" />
+    <Content Include="src\assets\images\ic_item_new.png" />
+    <Content Include="src\assets\images\ic_language.png" />
+    <Content Include="src\assets\images\ic_lock.png" />
+    <Content Include="src\assets\images\ic_lost_clock.gif" />
+    <Content Include="src\assets\images\ic_lost_computer.gif" />
+    <Content Include="src\assets\images\ic_lost_swan.png" />
+    <Content Include="src\assets\images\ic_love.png" />
+    <Content Include="src\assets\images\ic_love_add.png" />
+    <Content Include="src\assets\images\ic_microphone.png" />
+    <Content Include="src\assets\images\ic_music.png" />
+    <Content Include="src\assets\images\ic_myket.png" />
+    <Content Include="src\assets\images\ic_nouser.jpg" />
+    <Content Include="src\assets\images\ic_on_working.png" />
+    <Content Include="src\assets\images\ic_order.png" />
+    <Content Include="src\assets\images\ic_order_msg.png" />
+    <Content Include="src\assets\images\ic_order_user.png" />
+    <Content Include="src\assets\images\ic_projects.png" />
+    <Content Include="src\assets\images\ic_project_dubsman.png" />
+    <Content Include="src\assets\images\ic_project_followergir.png" />
+    <Content Include="src\assets\images\ic_project_mobilebank.png" />
+    <Content Include="src\assets\images\ic_project_telegram.png" />
+    <Content Include="src\assets\images\ic_setting.png" />
+    <Content Include="src\assets\images\ic_shop.png" />
+    <Content Include="src\assets\images\ic_store_package1.png" />
+    <Content Include="src\assets\images\ic_store_package2.png" />
+    <Content Include="src\assets\images\ic_store_package3.png" />
+    <Content Include="src\assets\images\ic_store_package4.png" />
+    <Content Include="src\assets\images\ic_store_package5.png" />
+    <Content Include="src\assets\images\ic_store_package6.png" />
+    <Content Include="src\assets\images\ic_telegram_scratch.png" />
+    <Content Include="src\assets\images\ic_user.png" />
+    <Content Include="src\assets\images\ic_user_add.png" />
+    <Content Include="src\assets\images\ic_user_body.png" />
+    <Content Include="src\assets\images\ic_video.png" />
+    <Content Include="src\assets\images\ic_video_director.png" />
+    <Content Include="src\assets\images\shop\ic_bitcoin.png" />
+    <Content Include="src\assets\images\shop\ic_dollar.png" />
+    <Content Include="src\assets\images\shop\ic_idpay.png" />
+    <Content Include="src\assets\images\shop\ic_order_msg.png" />
+    <Content Include="src\assets\images\shop\ic_order_user.png" />
+    <Content Include="src\assets\images\shop\ic_payeer.png" />
+    <Content Include="src\assets\images\shop\ic_perfectmoney.png" />
+    <Content Include="src\assets\images\shop\ic_shop_coin1.png" />
+    <Content Include="src\assets\images\shop\ic_shop_coin2.png" />
+    <Content Include="src\assets\images\shop\ic_shop_coin3.png" />
+    <Content Include="src\assets\images\shop\ic_shop_coin4.png" />
+    <Content Include="src\assets\images\shop\ic_shop_coin5.png" />
+    <Content Include="src\assets\images\shop\ic_shop_coin6.png" />
+    <Content Include="src\assets\images\shop\ic_shop_gem1.png" />
+    <Content Include="src\assets\images\shop\ic_shop_gem2.png" />
+    <Content Include="src\assets\images\shop\ic_shop_gem3.png" />
+    <Content Include="src\assets\images\shop\ic_shop_gem4.png" />
+    <Content Include="src\assets\images\shop\ic_shop_gem5.png" />
+    <Content Include="src\assets\images\shop\ic_shop_gem6.png" />
+    <Content Include="src\assets\images\shop\ic_user.png" />
+    <Content Include="src\assets\images\shop\ic_warning.png" />
+    <Content Include="src\assets\images\shop\ic_zarinpal.svg" />
+    <Content Include="src\assets\images\shop\Perfect_Money.png" />
+    <Content Include="src\assets\js\paymentpopup.js" />
+    <Content Include="src\assets\svg\add_user.svg" />
+    <Content Include="src\assets\svg\api.svg" />
+    <Content Include="src\assets\svg\api_monitor.svg" />
+    <Content Include="src\assets\svg\application.svg" />
+    <Content Include="src\assets\svg\applications.svg" />
+    <Content Include="src\assets\svg\arrow_circle_rotate.svg" />
+    <Content Include="src\assets\svg\arrow_circle_static.svg" />
+    <Content Include="src\assets\svg\arrow_left.svg" />
+    <Content Include="src\assets\svg\auto_add.svg" />
+    <Content Include="src\assets\svg\bag_blue.svg" />
+    <Content Include="src\assets\svg\bag_gray.svg" />
+    <Content Include="src\assets\svg\browser.svg" />
+    <Content Include="src\assets\svg\chart.svg" />
+    <Content Include="src\assets\svg\circle_load.svg" />
+    <Content Include="src\assets\svg\cli.svg" />
+    <Content Include="src\assets\svg\clipboard.svg" />
+    <Content Include="src\assets\svg\close.svg" />
+    <Content Include="src\assets\svg\color.svg" />
+    <Content Include="src\assets\svg\contact_us.svg" />
+    <Content Include="src\assets\svg\contract_document.svg" />
+    <Content Include="src\assets\svg\copy.svg" />
+    <Content Include="src\assets\svg\custumer_service.svg" />
+    <Content Include="src\assets\svg\download.svg" />
+    <Content Include="src\assets\svg\eye_close.svg" />
+    <Content Include="src\assets\svg\eye_open.svg" />
+    <Content Include="src\assets\svg\flag\ir.svg" />
+    <Content Include="src\assets\svg\flag\uk.svg" />
+    <Content Include="src\assets\svg\free.svg" />
+    <Content Include="src\assets\svg\handless-arrow-down.svg" />
+    <Content Include="src\assets\svg\handless_arrow_down.svg" />
+    <Content Include="src\assets\svg\home.svg" />
+    <Content Include="src\assets\svg\info.svg" />
+    <Content Include="src\assets\svg\load.svg">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="src\assets\svg\lock.svg" />
+    <Content Include="src\assets\svg\logout.svg" />
+    <Content Include="src\assets\svg\logo\android.svg" />
+    <Content Include="src\assets\svg\logo\apple.svg" />
+    <Content Include="src\assets\svg\logo\github.svg" />
+    <Content Include="src\assets\svg\logo\telegram.svg" />
+    <Content Include="src\assets\svg\logo\windows.svg" />
+    <Content Include="src\assets\svg\love.svg" />
+    <Content Include="src\assets\svg\mail.svg" />
+    <Content Include="src\assets\svg\mailbox.svg" />
+    <Content Include="src\assets\svg\map.svg" />
+    <Content Include="src\assets\svg\memo.svg" />
+    <Content Include="src\assets\svg\menu.svg" />
+    <Content Include="src\assets\svg\minus.svg" />
+    <Content Include="src\assets\svg\pencil.svg" />
+    <Content Include="src\assets\svg\phone.svg" />
+    <Content Include="src\assets\svg\plus.svg" />
+    <Content Include="src\assets\svg\post.svg" />
+    <Content Include="src\assets\svg\power_on.svg" />
+    <Content Include="src\assets\svg\rubbish.svg" />
+    <Content Include="src\assets\svg\secure.svg" />
+    <Content Include="src\assets\svg\setting.svg" />
+    <Content Include="src\assets\svg\settings.svg" />
+    <Content Include="src\assets\svg\settings_monocolor.svg" />
+    <Content Include="src\assets\svg\shopping_basket.svg" />
+    <Content Include="src\assets\svg\shopping_cart.svg" />
+    <Content Include="src\assets\svg\slot_machine.svg" />
+    <Content Include="src\assets\svg\sound.svg" />
+    <Content Include="src\assets\svg\speedometer.svg" />
+    <Content Include="src\assets\svg\theme.svg" />
+    <Content Include="src\assets\svg\tik_green.svg" />
+    <Content Include="src\assets\svg\trash.svg" />
+    <Content Include="src\assets\svg\two_gear.svg" />
+    <Content Include="src\assets\svg\user.svg" />
+    <Content Include="src\assets\svg\warning.svg" />
+    <Content Include="src\pages\component\footer\footer.html" />
+    <Content Include="src\pages\component\footer\footer.scss" />
+    <Content Include="src\pages\component\header\header.html" />
+    <Content Include="src\pages\component\header\header.scss" />
+    <Content Include="src\pages\component\input\input.scss" />
+    <Content Include="src\pages\component\list\list.scss" />
+    <Content Include="src\pages\component\menu\menu.html" />
+    <Content Include="src\pages\component\menu\menu.scss" />
+    <Content Include="src\pages\component\button\button.scss" />
+    <Content Include="src\pages\component\popup\popup.scss" />
+    <Content Include="src\pages\component\seekbar\seekbar.scss" />
+    <Content Include="src\pages\component\select\select.scss" />
+    <Content Include="src\pages\component\switch\switch.scss" />
+    <Content Include="src\pages\component\tabs\tabs.scss" />
+    <Content Include="src\pages\component\toast\toast.scss" />
+    <Content Include="src\pages\pages\api\api.html" />
+    <Content Include="src\pages\pages\api\api.scss" />
+    <Content Include="src\pages\pages\applications\followergir\followergir.html" />
+    <Content Include="src\pages\pages\applications\followergir\followergir.scss" />
+    <Content Include="src\pages\pages\applications\membergir\membergir.html" />
+    <Content Include="src\pages\pages\applications\membergir\membergir.scss" />
+    <Content Include="src\pages\pages\contact-us\contact-us.html" />
+    <Content Include="src\pages\pages\contact-us\contact-us.scss" />
+    <Content Include="src\pages\pages\home\home.html" />
+    <Content Include="src\pages\pages\home\home.scss" />
+    <Content Include="src\pages\pages\setting\setting.html" />
+    <Content Include="src\pages\pages\setting\setting.scss" />
+    <Content Include="src\pages\pages\shop\shop.html" />
+    <Content Include="src\pages\pages\shop\shop.scss" />
+    <Content Include="src\pages\ui\functions.scss" />
+    <Content Include="src\pages\ui\styles-classes.scss" />
+    <Content Include="src\pages\ui\styles.scss" />
+    <Content Include="src\pages\ui\theme\cosmic.scss" />
+    <Content Include="src\pages\ui\theme\dark.scss" />
+    <Content Include="src\pages\ui\theme\navy.scss" />
+    <Content Include="src\pages\ui\theme\light.scss" />
+    <Content Include="webpack.common.js" />
+    <Content Include="webpack.config.js" />
+    <Content Include="webpack.dev.js" />
+    <Content Include="webpack.prod.js" />
+    <None Include="tsconfig.json" />
+    <Content Include="public\index.html" />
+    <Content Include="src\index.html" />
+    <None Include="src\pages\pages.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="dist" />
+    <Folder Include="dist\out-tsc" />
+    <Folder Include="environment\" />
+    <Folder Include="environment\types\" />
+    <Folder Include="public" />
+    <Folder Include="src" />
+    <Folder Include="src\assets\" />
+    <Folder Include="src\assets\audio\" />
+    <Folder Include="src\assets\fonts\" />
+    <Folder Include="src\assets\images\" />
+    <Folder Include="src\assets\images\shop\" />
+    <Folder Include="src\assets\js\" />
+    <Folder Include="src\assets\svg\" />
+    <Folder Include="src\assets\svg\flag\" />
+    <Folder Include="src\assets\svg\logo\" />
+    <Folder Include="src\core\IndexDB\" />
+    <Folder Include="src\core\IONet\" />
+    <Folder Include="src\core\Language\" />
+    <Folder Include="src\core\Thread\" />
+    <Folder Include="src\core\Utils\" />
+    <Folder Include="src\pages" />
+    <Folder Include="src\core\" />
+    <Folder Include="src\pages\component\footer\" />
+    <Folder Include="src\pages\component\header\" />
+    <Folder Include="src\pages\component\list\" />
+    <Folder Include="src\pages\component\menu\" />
+    <Folder Include="src\pages\component\input\" />
+    <Folder Include="src\pages\component\switch\" />
+    <Folder Include="src\pages\component\popup\" />
+    <Folder Include="src\pages\component\seekbar\" />
+    <Folder Include="src\pages\component\select\" />
+    <Folder Include="src\pages\component\tabs\" />
+    <Folder Include="src\pages\component\toast\" />
+    <Folder Include="src\pages\pages\" />
+    <Folder Include="src\pages\pages\api\" />
+    <Folder Include="src\pages\pages\applications\" />
+    <Folder Include="src\pages\pages\applications\followergir\" />
+    <Folder Include="src\pages\pages\applications\membergir\" />
+    <Folder Include="src\pages\pages\contact-us\" />
+    <Folder Include="src\pages\pages\shop\" />
+    <Folder Include="src\pages\ui\" />
+    <Folder Include="src\pages\component\button\" />
+    <Folder Include="src\pages\component\" />
+    <Folder Include="src\pages\pages\home\" />
+    <Folder Include="src\pages\pages\setting\" />
+    <Folder Include="src\pages\ui\theme\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\core\AESCrypt.ts" />
+    <TypeScriptCompile Include="src\core\AppService.ts" />
+    <TypeScriptCompile Include="src\core\Language\ILanguage.ts" />
+    <TypeScriptCompile Include="src\core\Language\Language.ts" />
+    <TypeScriptCompile Include="src\core\Language\Language_EN.ts" />
+    <TypeScriptCompile Include="src\core\Language\Language_FA.ts" />
+    <TypeScriptCompile Include="src\core\Listner.ts" />
+    <TypeScriptCompile Include="src\core\IndexDB\IndexDB.ts" />
+    <TypeScriptCompile Include="src\core\IndexDB\IndexDBHandler.ts" />
+    <TypeScriptCompile Include="src\core\IONet\WebObject.ts" />
+    <TypeScriptCompile Include="src\core\ListnerDelegate.ts" />
+    <TypeScriptCompile Include="src\core\Network.ts" />
+    <TypeScriptCompile Include="src\core\Subscriber.ts" />
+    <TypeScriptCompile Include="src\core\Router.ts" />
+    <TypeScriptCompile Include="src\core\Thread\Thread.ts" />
+    <TypeScriptCompile Include="src\core\Utils\ArrayList.ts" />
+    <TypeScriptCompile Include="src\core\Utils\Audio.ts" />
+    <TypeScriptCompile Include="src\core\Utils\Byte.ts" />
+    <TypeScriptCompile Include="src\core\Utils\countries.ts" />
+    <TypeScriptCompile Include="src\core\Utils\DateUtils.ts" />
+    <TypeScriptCompile Include="src\core\Utils\EnumUtils.ts" />
+    <TypeScriptCompile Include="src\core\Utils\Json.ts" />
+    <TypeScriptCompile Include="src\core\Utils\ManageData.ts" />
+    <TypeScriptCompile Include="src\core\Utils\Storage.ts" />
+    <TypeScriptCompile Include="src\core\Utils\StringUtils.ts" />
+    <TypeScriptCompile Include="src\core\Utils\Interval.ts" />
+    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="src\pages\component\Component.ts" />
+    <TypeScriptCompile Include="src\pages\component\footer\footer.ts" />
+    <TypeScriptCompile Include="src\pages\component\header\header.ts" />
+    <TypeScriptCompile Include="src\pages\component\input\input.ts" />
+    <TypeScriptCompile Include="src\pages\component\list\list.ts" />
+    <TypeScriptCompile Include="src\pages\component\menu\menu.ts" />
+    <TypeScriptCompile Include="src\pages\component\menu\menu.controller.ts" />
+    <TypeScriptCompile Include="src\pages\component\button\button.ts" />
+    <TypeScriptCompile Include="src\pages\component\popup\popup.ts" />
+    <TypeScriptCompile Include="src\pages\component\seekbar\seekbar.ts" />
+    <TypeScriptCompile Include="src\pages\component\select\select.ts" />
+    <TypeScriptCompile Include="src\pages\component\switch\switch.ts" />
+    <TypeScriptCompile Include="src\pages\component\tabs\tabs.ts" />
+    <TypeScriptCompile Include="src\pages\component\toast\toast.ts" />
+    <TypeScriptCompile Include="src\pages\pages\api\api.ts" />
+    <TypeScriptCompile Include="src\pages\pages\applications\followergir\followergir.ts" />
+    <TypeScriptCompile Include="src\pages\pages\applications\membergir\membergir.ts" />
+    <TypeScriptCompile Include="src\pages\pages\contact-us\contact-us.ts" />
+    <TypeScriptCompile Include="src\pages\pages\Page.ts" />
+    <TypeScriptCompile Include="src\pages\pages\home\home.ts" />
+    <TypeScriptCompile Include="src\pages\pages\setting\setting.controller.ts" />
+    <TypeScriptCompile Include="src\pages\pages\setting\setting.ts" />
+    <TypeScriptCompile Include="src\pages\pages\shop\shop.ts" />
+    <TypeScriptCompile Include="src\pages\ui\Color.ts" />
+    <TypeScriptCompile Include="src\pages\ui\UI.ts" />
+    <TypeScriptCompile Include="src\polyfills.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
