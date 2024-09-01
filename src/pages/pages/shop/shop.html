@@ -1,0 +1,128 @@
+<div id="Shop" class="shop-page">
+
+	<div class="page-container">
+
+		<div class="page-header">
+			<img src="../../../assets/images/ic_shop.png" class="page-header-image" alt="Shop" /><h1 class="page-header-title">{{Shop_Header}}</h1>
+		</div>
+
+		<div class="page-body">
+			<div class="all-packages packages-container" id="Store_Packages_Container">
+
+				<div id="Shop_Package_Free" class="package-free box glass-body">
+					<div class="package container">
+						<img src="/assets/images/shop/bag-coin.png" class="header_img" alt="" />
+						<h3 class="name">{{Shop_Package_Free}}</h3>
+						<hr class="hr" />
+						<div class="tozih">
+							<img src="../../../assets/images/ic_coin.png" />
+							<p>{{Shop_Coin}}: {{Shop_Package_Free_Credit}}</p>
+						</div>
+						<div class="tozih">
+							<img src="../../../assets/images/ic_dollar.png" />
+							<p>{{Shop_Price}}: {{Shop_Package_Free_Price}}</p>
+						</div>
+						<div class="tozih">
+							<img src="../../../assets/images/ic_user_add.png" />
+							<p>{{Shop_OneKMember}}: {{Shop_Package_Free_Price}}</p>
+						</div>
+						<div class="tozih">
+							<img src="../../../assets/images/ic_love_add.png" />
+							<p>{{Shop_OneKLike}}: {{Shop_Package_Free_Price}}</p>
+						</div>
+						<div class="tozih">
+							<img src="../../../assets/images/ic_comment_add.png" />
+							<p>{{Shop_OneKComment}}: {{Shop_Package_Free_Price}}</p>
+						</div>
+
+						<div class="button-container">
+							<!--<button type="button" id="Shop_PayBtn_Coin_{{i}}" class="button" (click)="showPopUp(i)"><span>{{Shop_Buy}}</span></button>-->
+							<button id="Shop_PaymentButton_Free" data-text="{{Shop_Package_Free_Button}}"></button>
+
+						</div>
+					</div>
+				</div>
+
+				<!--
+				<div class="box glass-body" *ngFor="let item of coinList; let i = index">
+					<div class="package container">
+
+						<img src="{{item.image}}" class="header_img" alt="Package" />
+						<h2>{{this.language.Shop_Package}} {{item.id}}</h2>
+						<hr class="hr" />
+						<div class="tozih">
+							<img src="../../../assets/images/ic_coin.png" alt="IO Coin" />
+							<p>{{Shop_Coin}}: {{item.stringCredit}}</p>
+						</div>
+						<div class="tozih">
+							<img src="../../../assets/images/ic_dollar.png" alt="Dollar" />
+							<p>{{Shop_Price}}: {{item.stringPrice}} {{Shop_Value}}</p>
+						</div>
+						<div class="tozih">
+							<img src="../../../assets/images/ic_user_add.png" alt="Follower Plus" />
+							<p>{{Shop_OneKMember}}: {{item.oneKPriceUser}} {{Shop_Value}}</p>
+						</div>
+						<div class="tozih">
+							<img src="../../../assets/images/ic_love_add.png" alt="Like Plus" />
+							<p>{{Shop_OneKLike}}: {{item.oneKPriceLike}} {{Shop_Value}}</p>
+						</div>
+						<div class="tozih">
+							<img src="../../../assets/images/ic_comment_add.png" alt="Comment Plus" />
+							<p>{{Shop_OneKComment}}: {{item.oneKPriceComment}} {{Shop_Value}}</p>
+						</div>
+
+						<div class="button-container">
+							<button [text]="language.Shop_Buy" [isStatic]="true"></button>
+
+						</div>
+					</div>
+				</div>
+					-->
+			</div>
+
+			<div class="all-packages packages-empty-container" id="Store_Packages_Empty_Container">
+				<div class="box glass-body">
+					<div class="package loading"></div>
+				</div>
+				<div class="box glass-body">
+					<div class="package loading"></div>
+				</div>
+				<div class="box glass-body">
+					<div class="package loading"></div>
+				</div>
+				<div class="box glass-body">
+					<div class="package loading"></div>
+				</div>
+				<div class="box glass-body">
+					<div class="package loading"></div>
+				</div>
+				<div class="box glass-body">
+					<div class="package loading"></div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="page-footer">
+			<ul>
+				<li>{{Shop_Warning1}}</li>
+			</ul>
+		</div>
+
+	</div>
+
+</div>
+
+
+<!--
+<svg class="heart-loader" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 90 90" version="1.1">
+	<g class="heart-loader__group">
+		<path class="heart-loader__square" stroke-width="1" fill="none" d="M0,30 0,90 60,90 60,30z" />
+		<path class="heart-loader__circle m--left" stroke-width="1" fill="none" d="M60,60 a30,30 0 0,1 -60,0 a30,30 0 0,1 60,0" />
+		<path class="heart-loader__circle m--right" stroke-width="1" fill="none" d="M60,60 a30,30 0 0,1 -60,0 a30,30 0 0,1 60,0" />
+		<path class="heart-loader__heartPath" stroke-width="2" d="M60,30 a30,30 0 0,1 0,60 L0,90 0,30 a30,30 0 0,1 60,0" />
+	</g>
+</svg>
+-->
+
+<ng-template #Shop_Dynamic_Container class="dynamic-container"></ng-template>

@@ -1,0 +1,164 @@
+@import '../../ui/functions.scss';
+
+
+.menu-expanded, .menu-compacted {
+	//min-height: 100%;
+	//height: 100%; //height won't work with this
+
+	.menu-container {
+		height: 100%;
+	}
+}
+
+.menu-collapsed {
+	height: 100%; //When not support calc
+	height: calc(100% - 65px);
+
+	.menu-container {
+		height: 100%; //When not support calc
+		height: calc(100% - 65px); //Need to set height, because of scroll be visible in small device
+	}
+}
+
+
+
+.menu-component {
+	position: fixed;
+	//align-items: stretch;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	.menu-container {
+		position: relative;
+		width: 256px;
+		transition: width 0.2s ease;
+		//transition-property: all;
+		//transition-duration: 0.2s;
+		z-index: 101;
+		border-top: solid 1px val(border-color);
+		border-right: solid 1px val(border-color);
+		background-color: val(background-color-1);
+
+		.list {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			overflow-y: auto;
+
+			$itemBorder: 5px solid val(background-color-1);
+			$itemBorderTransparent: 5px solid val(color);
+
+			.item {
+				border-left: $itemBorder;
+				border-bottom: 1px solid val(border-color);
+				background-color: val(background-color-1);
+				color: val(text-color);
+				overflow: hidden;
+				list-style-type: none;
+
+				.clickable {
+					padding: 10px 5px;
+					color: red;
+					line-height: 34px; //IDNK WHY, line height must be equel of li, otherwise height will bigger on <p display="inline"> instead of none
+					overflow: hidden;
+
+					&:hover {
+						p {
+							color: val(color-simple);
+						}
+					}
+				}
+
+				.icon {
+					margin: 0 8px;
+					width: 20px;
+					height: 20px;
+					overflow: hidden;
+				}
+
+				p {
+					font-weight: 500;
+					overflow: hidden;
+				}
+
+
+				.arrow {
+					float: right;
+					margin-right: 5px;
+
+					img {
+						width: 16px;
+						height: 16px;
+					}
+				}
+
+
+				.close {
+					max-height: 0;
+					transition: max-height 0.23s ease-out;
+					overflow: hidden;
+				}
+
+				.child-list {
+					height: 0;
+					overflow: hidden;
+					margin: 0;
+					padding: 0;
+					list-style-type: none;
+					-moz-transition: all .23s;
+					-ms-transition: all .23s;
+					-o-transition: all .23s;
+					-webkit-transition: all .23s;
+					transition: all .23s;
+					overflow: hidden;
+
+					li {
+						border-left: $itemBorder;
+						overflow: hidden;
+
+						.clickable-child {
+							width: 100%;
+							height: 34px;
+							margin-left: 13px;
+							display: flex;
+							align-items: center;
+							cursor: pointer;
+							overflow: hidden;
+
+							&:hover {
+								p {
+									color: val(color-simple);
+								}
+							}
+						}
+					}
+
+					.selected-item {
+						border-left: $itemBorderTransparent;
+						overflow: hidden;
+
+						.clickable-child {
+							p {
+								color: val(color);
+							}
+						}
+					}
+				}
+
+				.child-list-open {
+					margin-bottom: 20px;
+				}
+			}
+
+			.selected-item {
+				border-left: $itemBorderTransparent;
+
+				.clickable {
+					p {
+						color: val(color);
+					}
+				}
+			}
+		}
+	}
+}

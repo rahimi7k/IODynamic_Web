@@ -1,0 +1,372 @@
+@import './functions.scss';
+
+/*
+//https://stackoverflow.com/questions/9629346/difference-between-css3-transitions-ease-in-and-ease-out
+--CSS3's transitions and animations support easing, formally called a "timing function". The common ones are ease-in, ease-out, ease-in-out, ease, and linear, or you can specify your own using cubic-bezier().
+
+ease-in will start the animation slowly, and finish at full speed.
+ease-out will start the animation at full speed, then finish slowly.
+ease-in-out will start slowly, be fastest at the middle of the animation, then finish slowly.
+ease is like ease-in-out, except it starts slightly faster than it ends.
+linear uses no easing.
+*/
+
+
+.no-scrollable {
+	position: fixed;
+	overflow-y: scroll; //This works for me because footer always bottom of page and scrool always is visible
+}
+
+
+.disable-select {
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	-o-user-select: none;
+	user-select: none; /* supported by Chrome and Opera */
+}
+
+.disable-drag {
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+
+
+.disable-drag-img {
+	pointer-events: none;
+}
+
+
+.clickable {
+	cursor: pointer;
+	transition: all 0.08s ease-in-out;
+
+	&:hover:not([disabled]) {
+		opacity: 0.9;
+	}
+
+	&:focus:not([disabled]), &:active:not([disabled]) {
+		opacity: 0.8;
+	}
+}
+
+
+.disabled {
+	opacity: 0.9;
+	filter: brightness(0.9);
+}
+
+
+
+
+.logo-dynamic {
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	perspective: 800px;
+	margin: 0 auto;
+
+	.line {
+		position: absolute;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background-color: transparent;
+	}
+
+	.one {
+		left: 0%;
+		top: 0%;
+		animation: rotate-one 1s linear infinite;
+		border-bottom: 2px solid #888;
+	}
+
+	.two {
+		right: 0%;
+		top: 0%;
+		animation: rotate-two 1s linear infinite;
+		border-right: 2px solid #28c2f7;
+	}
+
+	.three {
+		right: 0%;
+		bottom: 0%;
+		animation: rotate-three 1s linear infinite;
+		border-top: 2px solid #888;
+	}
+
+	@keyframes rotate-one {
+		0% {
+			transform: rotateX(50deg) rotateY(-55deg) rotateZ(0deg);
+		}
+
+		100% {
+			transform: rotateX(50deg) rotateY(-55deg) rotateZ(360deg);
+		}
+	}
+
+	@keyframes rotate-two {
+		0% {
+			transform: rotateX(55deg) rotateY(13deg) rotateZ(0deg);
+		}
+
+		100% {
+			transform: rotateX(55deg) rotateY(13deg) rotateZ(360deg);
+		}
+	}
+
+	@keyframes rotate-three {
+		0% {
+			transform: rotateX(50deg) rotateY(55deg) rotateZ(0deg);
+		}
+
+		100% {
+			transform: rotateX(50deg) rotateY(55deg) rotateZ(360deg);
+		}
+	}
+}
+
+
+
+
+
+.glow-button {
+
+	@keyframes glowing {
+		0% {
+			background-position: 0 0;
+		}
+
+		50% {
+			background-position: 200% 0;
+		}
+
+		100% {
+			background-position: 0 0;
+		}
+	}
+
+	&:before {
+		content: '';
+		background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+		position: absolute;
+		top: -2px;
+		left: -2px;
+		background-size: 200%;
+		z-index: -1;
+		filter: blur(3px);
+		width: calc(100% + 5px);
+		height: calc(100% + 5px);
+		animation: glowing 10s linear infinite;
+		opacity: 0.65;
+		border-radius: 8px;
+	}
+
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: #aaaaaa;
+		opacity: 0.7;
+		border-radius: 8px;
+		transition: all 0.5s;
+	}
+
+	&:hover:after {
+		background: transparent;
+	}
+}
+
+
+.section-container {
+	display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -ms-flexbox; /* TWEENER - IE 10 */
+	display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+	display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+	flex-wrap: wrap;
+	justify-content: center;
+
+
+	@media only screen and (min-width: 900px) {
+		.section {
+			width: 46%;
+		}
+	}
+
+	@media only screen and (min-width: 800px) and (max-width: 900px) {
+		.section {
+			width: 80%;
+		}
+	}
+
+	@media only screen and (min-width: 575px) and (max-width: 800px) {
+		.section {
+			width: 90%;
+		}
+	}
+
+	@media only screen and (max-width: 575px) {
+		.section {
+			width: 100%;
+		}
+	}
+
+	.section {
+		min-width: 240px;
+		max-width: 700px;
+		margin: 10px;
+		border-radius: 8px;
+		border: 1px solid val(border-color);
+
+		.section-header {
+			border-bottom: 1px solid val(border-color);
+			padding: 5px;
+		}
+
+		.section-body {
+			padding: 15px;
+		}
+	}
+}
+
+
+.glass-header {
+	backdrop-filter: contrast(110%) brightness(100%) blur(2px);
+	background: radial-gradient(ellipse at 20% 0%, hsla(0, 0%, 100%, 0.3) 10%, hsla(0, 0%, 100%, 0.2) 30%, hsla(0, 0%, 100%, 0.1) 50%, hsla(0, 0%, 100%, 0.1) 80%);
+	//background-size: 150% 100%;
+}
+
+.glass-body {
+	backdrop-filter: contrast(110%) brightness(100%) blur(1px);
+	box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.35);
+	border-radius: 6px;
+	//-webkit-filter: drop-shadow(0px 0px 1px rgba(230,230,230,.35));
+	//filter: drop-shadow(0px 0px 1px rgba(230,230,230,.35));
+	background-color: rgba(255,255,255,.2);
+	padding: 8px;
+
+	.container {
+		background-color: val(background-color-2);
+		border: 1px solid rgba(120, 120, 120, 0.5);
+		border-radius: 6px;
+	}
+}
+
+
+.upside-down {
+	@include rotate(180);
+}
+
+
+.rotate-0 {
+	transition-property: transform;
+	transition-duration: 0.35s;
+	@include rotate(0);
+}
+
+
+.rotate-180 {
+	transition-property: transform;
+	transition-duration: 0.35s;
+	@include rotate(180);
+}
+
+
+.flipped {
+	transform-style: preserve-3d;
+	transform-origin: center right;
+	transition: transform 1s;
+	transform: translateX(-100%) rotateY(-180deg);
+}
+
+
+
+
+.glow-dots {
+	display: flex;
+	justify-content: center;
+
+	@keyframes grow {
+		0%, 40%, 100% {
+			transform: scale(0.3);
+		}
+
+		20% {
+			transform: scale(0.7);
+		}
+	}
+
+
+	li {
+		list-style: none;
+		width: 32px;
+		height: 32px;
+		background: #fff;
+		border-radius: 50%;
+		animation: grow 1.6s ease-in-out infinite;
+	}
+
+	li:nth-child(1) {
+		animation-delay: -1.4s;
+		background: #ffff00;
+		box-shadow: 0 0 45px #ffff00;
+	}
+
+	li:nth-child(2) {
+		animation-delay: -1.2s;
+		background: #76ff03;
+		box-shadow: 0 0 45px #76ff03;
+	}
+
+	li:nth-child(3) {
+		animation-delay: -1s;
+		background: #f06292;
+		box-shadow: 0 0 45px #f06292;
+	}
+
+	li:nth-child(4) {
+		animation-delay: -0.8s;
+		background: #4fc3f7;
+		box-shadow: 0 0 45px #4fc3f7;
+	}
+
+	li:nth-child(5) {
+		animation-delay: -0.6s;
+		background: #ba68c8;
+		box-shadow: 0 0 45px #ba68c8;
+	}
+
+	li:nth-child(6) {
+		animation-delay: -0.4s;
+		background: #f57c00;
+		box-shadow: 0 0 45px #f57c00;
+	}
+
+	li:nth-child(7) {
+		animation-delay: -0.2s;
+		background: #673ab7;
+		box-shadow: 0 0 45px #673ab7;
+	}
+}
+
+
+
+.btn-container {
+	text-align: center;
+	margin: 50px 0 20px;
+}
+
+
+.flex-center {
+	display: flex;
+	align-items: center;
+}

@@ -1,0 +1,776 @@
+﻿<div id="Api" class="api-page">
+
+	<div class="page-container">
+
+		<div class="page-header">
+			<img src="/assets/svg/api_monitor.svg" class="page-header-image" alt="API Logo" />
+			<h1 class="page-header-title">{{Api_Title}}</h1>
+		</div>
+
+		<div class="page-body">
+
+			{{Api_Introduce_Text1}}
+			{{Api_Introduce_Text2}}
+			<br />
+			<br />
+
+			{{Api_Introduce_Text3}}
+			<br />
+			<br />
+			<br />
+
+			<strong>
+				{{Description}}
+			</strong>
+			<br />
+
+			{{Api_Introduce_Text4}} &nbsp;&nbsp;{{Api_Introduce_Text_Link}}
+			<div class="box">
+				{{Api_Introduce_Text_SSL}}
+			</div>
+
+			<br />
+			<br />
+
+			<img src="/assets/svg/info.svg" class="icon" alt="">{{Api_Introduce_Session}}
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Parameter}}</th>
+						<th>{{Description}}</th>
+						<th>{{Type}}</th>
+						<th>{{Type}}</th>
+					</tr>
+				</thead>
+				<tr>
+					<th>Authorization</th>
+					<th>{{Api_Session_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+			</table>
+
+
+			<div class="box">
+				{{Api_Introduce_Text_Session}}
+			</div>
+			<div class="box box-green">
+				{{Api_Introduce_Session_Info}}
+			</div>
+
+			<br />
+			<strong>
+				{{Api_Introduce_Response_Title}}
+			</strong>
+			<br />
+			{{Api_Introduce_Response_Text}}
+
+			<br />
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Parameter}}</th>
+						<th>{{Description}}</th>
+					</tr>
+				</thead>
+				<tr>
+					<th>status</th>
+					<th>{{Api_Introduce_Response_Table_Status}}</th>
+				</tr>
+				<tr>
+					<th>description</th>
+					<th>{{Api_Introduce_Response_Table_Description}}</th>
+				</tr>
+			</table>
+
+
+			<br />
+			<br />
+			<br />
+			<strong>
+				{{Api_Introduce_Response_Description}}
+			</strong>
+			<br />
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Error}}</th>
+						<th>{{Description}}</th>
+					</tr>
+				</thead>
+				<tr>
+					<th>CREDIT_LIMIT</th>
+					<th>{{Api_Introduce_Response_Error_CREDIT_LIMIT}}</th>
+				</tr>
+				<tr>
+					<th>INVALID_PARAMETERS</th>
+					<th>{{Api_Introduce_Response_Error_INVALID_PARAMETERS}}</th>
+				</tr>
+				<tr>
+					<th>METHOD_NOT_FOUND</th>
+					<th>{{Api_Introduce_Response_Error_METHOD_NOT_FOUND}}</th>
+				</tr>
+				<tr>
+					<th>INVALID_REQUEST_METHOD</th>
+					<th>{{Api_Introduce_Response_Error_INVALID_REQUEST_METHOD}}</th>
+				<tr>
+					<th>ORDER_NOT_FOUND</th>
+					<th>{{Api_Introduce_Response_Error_ORDER_NOT_FOUND}}</th>
+				</tr>
+				<tr>
+					<th>TOO_MANY_REQUEST</th>
+					<th>{{Api_Introduce_Response_Error_TOO_MANY_REQUEST}}</th>
+				</tr>
+				<tr>
+					<th>UNAUTHORIZED</th>
+					<th>{{Api_Introduce_Response_Error_UNAUTHORIZED}}</th>
+				</tr>
+				<tr>
+					<th>USER_BLOCK</th>
+					<th>{{Api_Introduce_Response_Error_USER_BLOCK}}</th>
+				</tr>
+			</table>
+
+			<br />
+
+			<div class="box box-warning">
+				{{Api_Introduce_Error_Abuse}}
+			</div>
+			<br />
+			<br />
+
+			<!--
+	 <div class="loader">
+		<div class="l_main">
+			<div class="l_square"><span></span><span></span><span></span></div>
+			<div class="l_square"><span></span><span></span><span></span></div>
+			<div class="l_square"><span></span><span></span><span></span></div>
+			<div class="l_square"><span></span><span></span><span></span></div>
+		</div>
+	</div>
+	-->
+		</div>
+	</div>
+
+
+	<br />
+	<br />
+	<br />
+
+
+	<div class="page-container content-container">
+		<div class="page-header content-header">
+			<div>
+				<img src="/assets/images/ic_coin.png" alt="Coin" />
+				<h2 class="page-header-title">
+					{{Api_Get_Credit_Title}}
+				</h2>
+			</div>
+
+			<div>
+				{{Api_Request_Type}}: GET
+			</div>
+		</div>
+
+		<div class="page-body">
+
+			{{Api_Get_Credit_Text}}
+
+			<br />
+			<br />
+			<strong>
+				{{Api_Url_Structure}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				https://api.iodynamic.com/get_credit
+			</div>
+
+			<br />
+			<br />
+			<strong>
+				{{Response}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				<code id="Api_Response_GetCredit"></code>
+			</div>
+			{{Api_Coin_Description}}
+
+
+		</div>
+	</div>
+
+
+	<br />
+	<br />
+	<br />
+
+
+	<div class="page-container content-container">
+		<div class="page-header content-header">
+			<div>
+				<img src="/assets/svg/add_user.svg" alt="Follower" />
+				<h2 class="page-header-title">
+					{{Api_Order_Member_Title}}
+				</h2>
+			</div>
+
+			<div>
+				{{Api_Request_Type}}: POST
+			</div>
+		</div>
+
+		<div class="page-body">
+
+			{{Api_Order_Member_Text}}
+
+			<br />
+			<br />
+			<strong>
+				{{Api_Url_Structure}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				https://api.iodynamic.com/order_member
+			</div>
+
+			<br />
+			<strong>
+				{{Api_Parameters}}
+			</strong>
+
+			<br />
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Parameter}}</th>
+						<th>{{Description}}</th>
+						<th>{{Type}}</th>
+						<th>{{Type}}</th>
+					</tr>
+				</thead>
+
+				<tr>
+					<th>application</th>
+					<th>{{Api_App_Name_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>username</th>
+					<th>{{Api_Username_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>count</th>
+					<th>{{Api_Count_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>user_id</th>
+					<th>{{Api_UserId_Description}}</th>
+					<th>Int64</th>
+					<th>{{Optional}}</th>
+				</tr>
+			</table>
+
+			<br />
+			<br />
+			<strong>
+				{{Response}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				<code id="Api_Response_Order_Member"></code>
+			</div>
+			{{Api_Coin_Description}} {{AND}}
+			{{Api_Order_Count_Description}}.
+
+		</div>
+	</div>
+
+
+	<br />
+	<br />
+	<br />
+
+
+	<div class="page-container content-container">
+		<div class="page-header content-header">
+			<div>
+				<img src="/assets/svg/love.svg" alt="Like" />
+				<h2 class="page-header-title">
+					{{Api_Order_Like_Title}}
+				</h2>
+			</div>
+
+			<div>
+				{{Api_Request_Type}}: POST
+			</div>
+		</div>
+
+		<div class="page-body">
+
+			{{Api_Order_Like_Text}}
+
+			<br />
+			<br />
+			<strong>
+				{{Api_Url_Structure}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				https://api.iodynamic.com/order_like
+			</div>
+
+			<br />
+			<strong>
+				{{Api_Parameters}}
+			</strong>
+
+			<br />
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Parameter}}</th>
+						<th>{{Description}}</th>
+						<th>{{Type}}</th>
+						<th>{{Type}}</th>
+					</tr>
+				</thead>
+
+				<tr>
+					<th>application</th>
+					<th>{{Api_App_Name_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>username</th>
+					<th>{{Api_Username_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>post_id</th>
+					<th>{{Api_PostId_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>count</th>
+					<th>{{Api_Count_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>user_id</th>
+					<th>{{Api_UserId_Description}}</th>
+					<th>Int64</th>
+					<th>{{Optional}}</th>
+				</tr>
+			</table>
+
+			<br />
+			<br />
+			<strong>
+				{{Response}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				<code id="Api_Response_Order_Like"></code>
+			</div>
+			{{Api_Coin_Description}}&nbsp;{{AND}}&nbsp;
+			{{Api_Order_Count_Description}}.
+
+
+		</div>
+	</div>
+
+
+	<br />
+	<br />
+	<br />
+
+
+	<div class="page-container content-container">
+		<div class="page-header content-header">
+			<div>
+				<img src="/assets/svg/post.svg" alt="Post" />
+				<h2 class="page-header-title">
+					{{Api_Order_Comment_Title}}
+				</h2>
+			</div>
+
+			<div>
+				{{Api_Request_Type}}: POST
+			</div>
+		</div>
+
+		<div class="page-body">
+
+			{{Api_Order_Comment_Text}}
+
+			<br />
+			<br />
+			<strong>
+				{{Api_Url_Structure}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				https://api.iodynamic.com/order_comment
+			</div>
+
+			<br />
+			<strong>
+				{{Api_Parameters}}
+			</strong>
+
+			<br />
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Parameter}}</th>
+						<th>{{Description}}</th>
+						<th>{{Type}}</th>
+						<th>{{Type}}</th>
+					</tr>
+				</thead>
+
+				<tr>
+					<th>application</th>
+					<th>{{Api_App_Name_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>username</th>
+					<th>{{Api_Username_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>post_id</th>
+					<th>{{Api_PostId_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>comments_list</th>
+					<th>{{Api_Order_Comment_List_Description}}</th>
+					<th>JSON Array</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>user_id</th>
+					<th>{{Api_UserId_Description}}</th>
+					<th>Int64</th>
+					<th>{{Optional}}</th>
+				</tr>
+			</table>
+
+			<br />
+			<br />
+			<strong>
+				{{Api_Order_Comment_List_Description_Example_Title}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				<code id="Api_Comment_List"></code>
+			</div>
+
+			<br />
+			<br />
+			<strong>
+				{{Response}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				<code id="Api_Response_Order_Comment"></code>
+			</div>
+			{{Api_Coin_Description}}&nbsp;{{AND}}&nbsp;
+			{{Api_Order_Count_Description}}.
+
+
+		</div>
+	</div>
+
+
+	<br />
+	<br />
+	<br />
+
+
+	<div class="page-container content-container">
+		<div class="page-header content-header">
+			<div>
+				<img src="/assets/svg/chart.svg" alt="Chart" />
+				<h2 class="page-header-title">
+					{{Api_Get_Order_Title}}
+				</h2>
+			</div>
+
+			<div>
+				{{Api_Request_Type}}: GET
+			</div>
+		</div>
+
+		<div class="page-body">
+
+			{{Api_Get_Order_Text}}
+
+			<br />
+			<br />
+			<strong>
+				{{Api_Url_Structure}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				https://api.iodynamic.com/get_order
+			</div>
+
+			<br />
+			<strong>
+				{{Api_Parameters}}
+			</strong>
+
+			<br />
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Parameter}}</th>
+						<th>{{Description}}</th>
+						<th>{{Type}}</th>
+						<th>{{Type}}</th>
+					</tr>
+				</thead>
+
+				<tr>
+					<th>application</th>
+					<th>{{Api_App_Name_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>username</th>
+					<th>{{Api_Get_Order_Username_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+			</table>
+
+			<br />
+			<br />
+			<strong>
+				{{Response}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				<code id="Api_Response_Get_Order"></code>
+			</div>
+
+
+			<br />
+			<strong>
+				{{Api_Parameters_Received}}
+			</strong>
+			<br />
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Parameter}}</th>
+						<th>{{Description}}</th>
+					</tr>
+				</thead>
+
+				<tr>
+					<th>order_count</th>
+					<th>{{Api_Parameters_Order_Count_Description}}</th>
+				</tr>
+				<tr>
+					<th>remained</th>
+					<th>{{Api_Parameters_Remained_Description}}</th>
+				</tr>
+				<tr>
+					<th>error</th>
+					<th>{{Api_Parameters_Error_Description}}</th>
+				</tr>
+			</table>
+
+
+			<br />
+			<br />
+			<strong>
+				{{Api_Parameters_Error_Description_Title}}
+			</strong>
+			<br />
+			{{Api_Parameters_Error_Description_Text}}
+			<br />
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Error}}</th>
+						<th>{{Description}}</th>
+					</tr>
+				</thead>
+
+				<tr>
+					<th>USER_PRIVATE</th>
+					<th>{{Api_Parameters_Error_USER_PRIVATE_Description}}</th>
+				</tr>
+				<tr>
+					<th>USER_NOT_FOUND</th>
+					<th>{{Api_Parameters_Error_USER_NOT_FOUND_Description}}</th>
+				</tr>
+				<tr>
+					<th>MEDIA_NOT_FOUND</th>
+					<th>{{Api_Parameters_Error_MEDIA_NOT_FOUND_Description}}</th>
+				</tr>
+				<tr>
+					<th>COMMENTS_DISABLED</th>
+					<th>{{Api_Parameters_Error_COMMENTS_DISABLED_Description}}</th>
+				</tr>
+				<tr>
+					<th>COMMENTS_DISABLED_FOR_VIEWER</th>
+					<th>{{Api_Parameters_Error_COMMENTS_DISABLED_FOR_VIEWER_Description}}</th>
+				</tr>
+				<tr>
+					<th>REPORT</th>
+					<th>{{Api_Parameters_Error_REPORT_Description}}</th>
+				</tr>
+			</table>
+
+
+		</div>
+	</div>
+
+
+	<br />
+	<br />
+	<br />
+
+
+	<div class="page-container content-container">
+		<div class="page-header content-header">
+			<div>
+				<img src="/assets/svg/rubbish.svg" alt="Rubbish" />
+				<h2 class="page-header-title">
+					{{Api_Cancel_Order_Title}}
+				</h2>
+			</div>
+
+			<div>
+				{{Api_Request_Type}}: POST
+			</div>
+		</div>
+
+		<div class="page-body">
+
+			{{Api_Cancel_Order_Text}}
+
+			<br />
+			<br />
+			<strong>
+				{{Api_Url_Structure}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				https://api.iodynamic.com/cancel_order
+			</div>
+
+			<br />
+			<strong>
+				{{Api_Parameters}}
+			</strong>
+
+			<br />
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Parameter}}</th>
+						<th>{{Description}}</th>
+						<th>{{Type}}</th>
+						<th>{{Type}}</th>
+					</tr>
+				</thead>
+
+				<tr>
+					<th>application</th>
+					<th>{{Api_App_Name_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>username</th>
+					<th>{{Api_Cancel_Username_Description}}</th>
+					<th>String</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+				<tr>
+					<th>type</th>
+					<th>{{Api_Cancel_Type_Description}}</th>
+					<th>Int</th>
+					<th>{{Mandatory}}</th>
+				</tr>
+			</table>
+
+			<br />
+			<br />
+			<strong>
+				{{Response}}
+			</strong>
+			<br />
+			<div class="box ltr">
+				<code id="Api_Response_Cancel_Order"></code>
+			</div>
+
+			<br />
+			<strong>
+				{{Api_Parameters_Received}}
+			</strong>
+			<br />
+			<br />
+			<table>
+				<thead>
+					<tr>
+						<th>{{Parameter}}</th>
+						<th>{{Description}}</th>
+					</tr>
+				</thead>
+				<tr>
+					<th>coin</th>
+					<th>{{Api_Coin_Description}}</th>
+				</tr>
+				<tr>
+					<th>order_count</th>
+					<th>{{Api_Parameters_Order_Count_Description}}</th>
+				</tr>
+				<tr>
+					<th>remained</th>
+					<th>{{Api_Parameters_Remained_Description}}</th>
+				</tr>
+			</table>
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+</div>

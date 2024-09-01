@@ -1,0 +1,110 @@
+<div id="Setting" class="setting-page">
+
+	<div class="page-container">
+
+		<div class="page-header">
+			<img src="../../../assets/svg/settings.svg" class="page-header-image" alt="Setting" /><h1 class="page-header-title">{{Setting_Title}}</h1>
+		</div>
+
+		<div class="page-body">
+
+			<div class="box theme">
+				<div class="title">
+					<img class="icon" src="../../../assets/svg/theme.svg" alt="Theme" />
+					<b>{{Setting_Theme_Title}}</b>
+				</div>
+
+
+				<button class="button-conatiner" id="Setting_Button_Theme_Light" data-text="{{Setting_Theme_Light}}"
+						data-image-inner-html='<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><circle fill="#ebeaea" cx="16" cy="16" r="16" /></svg>'></button>
+
+				<button class="button-conatiner" id="Setting_Button_Theme_Dark" data-text="{{Setting_Theme_Dark}}"
+						data-image-inner-html='<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><circle fill="#323259" cx="16" cy="16" r="16" /></svg>'></button>
+
+				<button class="button-conatiner" id="Setting_Button_Theme_Navy" data-text="{{Setting_Theme_Navy}}"
+						data-image-inner-html='<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><circle fill="#578fc3" cx="16" cy="16" r="16" /></svg>'></button>
+
+				<button class="button-conatiner" id="Setting_Button_Theme_Cosmic" data-text="{{Setting_Theme_Cosmic}}"
+						data-image-inner-html='<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><circle fill="#c19cd9" cx="16" cy="16" r="16" /></svg>'></button>
+
+			</div>
+
+
+			<div class="box color">
+				<div class="title">
+					<img class="icon" src="../../../assets/svg/color.svg" alt="Theme" />
+					<b>{{Setting_Color_Title}}</b>
+				</div>
+
+				<button class="button-conatiner" id="Setting_Button_Color_Default" data-text="{{Default}}"></button>
+
+				<div class="select-color">
+					<label for="Setting_Button_Color_Select">{{Setting_Color_Select_Color}}</label>
+					<input class="button-conatiner" id="Setting_Button_Color_Select" type="color" />
+				</div>
+
+				<div id="Setting_Color_Buttons_Container" class="colors">
+				</div>
+
+			</div>
+
+
+			<div class="box language">
+				<div class="title">
+					<img class="icon" src="../../../assets/images/ic_language.png" alt="Language" />
+					<b>{{Setting_Language_Title}}</b>
+				</div>
+
+				<button id="Setting_Button_Language_En" data-text="{{Setting_Language_En}}" data-image-src="/assets/svg/flag/uk.svg"></button>
+
+				<button id="Setting_Button_Language_Fa" data-text="{{Setting_Language_Fa}}" data-image-src="/assets/svg/flag/ir.svg"></button>
+			</div>
+
+			<!--
+					   <div class="box cli">
+						   <div class="title">
+							   <img class="icon" src="../../../assets/svg/cli.svg" alt="Command Line Interface"/>
+							   <b>{{Setting_Cli_Title}}</b>
+						   </div>
+
+
+						   <label class="my-label" for="Setting_Switch_Cli">{{Setting_Cli_Activity_In_Pages}}</label>
+						   <label class="switch">
+							   <input type="checkbox" (click)="onClickCliSwitch()" id="Setting_Switch_Cli">
+							   <span class="slider round"></span>
+						   </label>
+					   </div>
+			-->
+
+			<div class="box lastBox audio">
+				<div class="title">
+					<img class="icon" src="../../../assets/svg/sound.svg" />
+					<b>{{Setting_Audio_Title}}</b>
+				</div>
+				<div>
+					<label class="my-label" for="Setting_Switch_Audio">{{Setting_Audio_Activity}}</label>
+					<div id="Setting_Switch_Audio_Container">
+
+					</div>
+				</div>
+
+
+				<div class="volume">
+					<label class="my-label" for="Setting_Switch_Audio">{{Setting_Audio_Volume}}</label>
+					<p class="number" id="Setting_Volume_Value"></p>
+
+					<div id="Setting_Volume_Seekbar" class="seekbar-container">
+
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<ng-container #Setting_Dynamic_Container class="dynamic-container"> </ng-container>
+
+</div>

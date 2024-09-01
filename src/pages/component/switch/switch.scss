@@ -1,0 +1,50 @@
+@import '../../ui/functions.scss';
+
+
+.switch-component {
+	display: inline-block;
+	position: relative;
+	height: 28px;
+	width: 58px;
+	border: 1px solid val(border-color); //Only works ok with box-sizing: content-box
+	box-sizing: content-box; //Very Very imporant - makes border and padding size for themselves and div content has width and height for itself as size as i set
+	border-radius: 99px;
+	cursor: pointer;
+}
+
+
+//The ::before and ::after pseudo-elements are actually laid display: inline; by default.
+//Change the display value to inline-block for the width & height to take effect
+.switch-component::before {
+	display: inline-block;
+	content: "";
+	height: 24px;
+	width: 24px;
+	margin: 2px 2px 0;
+	background-color: val(background-color-1);
+	border-radius: 99px;
+	//transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+
+
+.rtl {
+	.switch-component-checked::before {
+		$checkedPoint: -30px;
+		-webkit-transform: translateX($checkedPoint);
+		-ms-transform: translateX($checkedPoint);
+		transform: translateX($checkedPoint);
+	}
+}
+
+
+.ltr {
+	.switch-component-checked::before {
+		$checkedPoint: 30px;
+		-webkit-transform: translateX($checkedPoint);
+		-ms-transform: translateX($checkedPoint);
+		transform: translateX($checkedPoint);
+	}
+}

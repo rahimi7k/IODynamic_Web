@@ -1,0 +1,95 @@
+@import '../../ui/functions.scss';
+
+.tabs-component {
+	width: 100%;
+
+	.buttons-container {
+		height: 75px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+
+		.tab-button {
+			/**
+				https://stackoverflow.com/questions/25066214/flexbox-not-giving-equal-width-to-elements
+				Each flex item has a flex-basis which is sort of like its initial size.
+				Then from there, any remaining free space is distributed proportionally (based on flex-grow) among the items.
+				With auto, that basis is the contents size (or defined size with width, etc.).
+				As a result, items with bigger text within are being given more space overall in your example.
+				If you want your elements to be completely even, you can set flex-basis: 0.
+				This will set the flex basis to 0 and then any remaining space (which will be all space since all basises are 0) will be proportionally distributed based on flex-grow.
+			*/
+			flex-grow: 1;
+			flex-basis: 0;
+			flex-shrink: 1;
+			height: 100%;
+			text-align: center;
+			background-color: val(color);
+			border: 1px solid val(border-color);
+			border-radius: 10px;
+
+			p {
+				display: inline-block;
+				color: #eeeeee;
+				font-size: 15px;
+				text-align: center;
+			}
+
+
+			@media only screen and (min-width: 1000px) {
+				img {
+					width: 58px;
+					height: 58px;
+				}
+			}
+
+			@media only screen and (min-width: 575px) and (max-width: 1000px) {
+				img {
+					width: 48px;
+					height: 48px;
+				}
+
+				p {
+					width: 100%;
+				}
+			}
+
+			@media only screen and (max-width: 575px) {
+				img {
+					width: 40px;
+					height: 40px;
+				}
+
+				p {
+					width: 100%;
+				}
+			}
+		}
+
+
+		.normal-tab {
+			cursor: pointer;
+
+			&:hover:enabled, &:focus:enabled {
+				background-image: linear-gradient(rgba(0, 0, 0, 0.08) 0 0);
+				cursor: pointer;
+			}
+
+			&:active:enabled {
+				background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0 0);
+			}
+		}
+
+		.selected-tab {
+			cursor: default;
+			opacity: 0.9;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0 0);
+		}
+	}
+
+
+	.tabs-container {
+		width: 100%;
+		height: 100%;
+	}
+}

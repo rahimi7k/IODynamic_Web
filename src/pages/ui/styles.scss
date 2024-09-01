@@ -1,0 +1,494 @@
+@import './theme/light.scss';
+@import './theme/dark.scss';
+@import './theme/navy.scss';
+@import './theme/cosmic.scss';
+@import './functions.scss';
+
+@font-face {
+	font-family: "OpenSans";
+	src: url("/assets/fonts/open_sans.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "WebYekan";
+	src: url("/assets/fonts/yekan_web.woff") format("woff");
+	font-display: swap;
+}
+
+$min-width: 575px;
+
+
+* {
+	&::-webkit-scrollbar {
+		width: 11px;
+	}
+	/* Track */
+	&::-webkit-scrollbar-track {
+		border-radius: 6px;
+	}
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: #aaaaaa;
+		border-radius: 6px;
+	}
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: #969696;
+	}
+
+	&::-webkit-scrollbar-track-piece {
+	}
+
+	&::-webkit-scrollbar-corner {
+	}
+}
+
+*,
+*:after,
+*::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+}
+
+body {
+	width: 100%; //Problem when position: fixed in body with no-scroll class in api page, idn what is the problem but this is required
+	margin: 0;
+	scrollbar-color: #aaaaaa #969696; // FireFox Scrollbar Color
+	scrollbar-width: auto; // FireFox Scrollbar Width - It has only thin
+}
+
+img, a, label {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
+	user-drag: none;
+}
+
+
+img {
+	object-fit: contain;
+}
+
+p {
+	margin: 0;
+}
+
+
+img, p, h1, h2, h3, h4, h5, h6, h7, h8, strong {
+	display: inline;
+	vertical-align: middle;
+}
+
+div, p, h1, h2, h3, h4, h5, h6, h7, h8, strong, span, label {
+	color: val(text-color);
+	font-family: val(global-font);
+	line-height: 25px;
+}
+
+a {
+	font-family: val(global-font);
+	line-height: 28px;
+	color: #64a8dd;
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover {
+		opacity: 0.9;
+	}
+
+	&:active {
+		opacity: 0.7;
+	}
+}
+
+ul {
+	padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, h7, h8 {
+	margin: 0;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+h2 {
+	font-size: 17px;
+}
+
+h3 {
+	font-size: 15px;
+}
+
+.rtl {
+	text-align: right;
+	direction: rtl;
+
+	* {
+		text-align: right;
+		direction: rtl;
+	}
+}
+
+.ltr {
+	text-align: left;
+	direction: ltr;
+
+	* {
+		text-align: left;
+		direction: ltr;
+	}
+}
+
+
+.my-label {
+	color: gray;
+	font-size: small;
+	display: inline;
+}
+
+
+
+.main {
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+@media only screen and (min-width: 1200px) {
+	.app {
+
+		.page {
+			padding: 13px;
+		}
+	}
+}
+
+@media only screen and (min-width: 575px) and (max-width: 1200px) {
+	.app {
+
+		.page {
+			padding: 8px;
+		}
+	}
+}
+
+
+@media only screen and (max-width: 575px) {
+	.app {
+
+		.page {
+			padding: 0;
+		}
+	}
+}
+
+
+.app {
+	display: flex;
+	flex-direction: row;
+	background-color: val(background-color);
+	min-height: calc(100vh - 65px /*- 220px*/ ); // 65px header height, 220px footer height
+
+	.page {
+		margin: 0 auto;
+		transition: width 0.2s ease;
+		width: 100%;
+	}
+}
+
+
+.fade {
+	animation: ease-in-out fade 0.2s;
+}
+
+@keyframes fade { /*fade == disappear*/
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+.radio-box {
+	margin: 0;
+	margin-top: 0;
+
+	input[type="radio"] {
+		position: absolute;
+		display: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-o-user-select: none;
+		user-select: none;
+
+		+ .radio-label {
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+
+			&:before {
+				content: '';
+				background: val(background-color);
+				border-radius: 100%;
+				border: 1px solid val(border-color);
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				position: relative;
+				top: -3.5px;
+				margin: 3px;
+				vertical-align: top;
+				cursor: pointer;
+				text-align: center;
+			}
+		}
+
+		&:checked {
+			+ .radio-label {
+				&:before {
+					background-color: val(background-color-1);
+					box-shadow: inset 0 0 0 4.2px val(background-color-1);
+				}
+			}
+		}
+
+		&:focus, &:hover {
+			+ .radio-label {
+				&:before {
+					// outline: none;
+					border-color: val(background-color-2);
+				}
+			}
+		}
+
+		&:disabled {
+			+ .radio-label {
+				opacity: 0.55;
+
+				&:before {
+					box-shadow: inset 0 0 0 4.5px val(background-color-1);
+					border-color: val(border-color);
+					background: val(background-color-1);
+				}
+			}
+		}
+
+		+ .radio-label {
+			&:empty {
+
+				&:before {
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+.section-header-image {
+	width: 65px;
+	height: 65px;
+	object-fit: contain;
+	margin: 0 8px;
+}
+
+.section-header-title {
+	position: relative;
+	top: 5px;
+	display: inline-block;
+	font-weight: 600;
+}
+
+
+
+@media only screen and (min-width: 575px) {
+	.page-container {
+
+		.page-header {
+			display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+			display: -ms-flexbox; /* TWEENER - IE 10 */
+			display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+			display: flex; /* NEW, Spec - Firefox, Chrome, Opera */
+
+			.page-header-image {
+				height: 85px;
+				width: 85px;
+			}
+		}
+
+		.page-body {
+			padding: 0 20px 20px;
+		}
+	}
+}
+
+@media only screen and (max-width: 575px) {
+
+	.page-container {
+
+		.page-header {
+			display: none
+		}
+
+		.page, .page-header, .page-body {
+			padding: 0;
+		}
+	}
+}
+
+
+.page-container {
+	$border-content: 5px;
+	$border: 8px;
+
+	.page-header {
+		align-items: center; //Vertically center
+		justify-content: center; //Horizontally center
+		//text-align: center;	 //Better using display:flex, because of align-item: center makes <p> center verically
+		background-color: val(background-color-1);
+		color: val(text-color);
+		border-top: 1px solid val(border-color);
+		border-left: 1px solid val(border-color);
+		border-right: 1px solid val(border-color);
+		border-top-left-radius: $border-content;
+		border-top-right-radius: $border-content;
+		padding: 13px 0;
+
+		.page-header-title {
+			margin: 0 8px;
+		}
+	}
+
+
+	.page-body {
+		width: 100%;
+		padding: 0;
+		background-color: val(background-color-1);
+		color: val(text-color);
+		border: 1px solid val(border-color);
+		border-bottom-left-radius: $border-content;
+		border-bottom-right-radius: $border-content;
+
+	}
+
+
+	.page-footer {
+		width: 100%;
+		padding: 0;
+		background-color: val(background-color-1);
+		color: val(text-color);
+		border-right: 1px solid val(border-color);
+		border-left: 1px solid val(border-color);
+		border-bottom: 1px solid val(border-color);
+		border-bottom-left-radius: $border-content;
+		border-bottom-right-radius: $border-content;
+	}
+}
+
+
+
+
+.hr {
+	line-height: 1px;
+	height: 1px;
+	position: relative;
+	outline: 0;
+	border: 0;
+	color: #000;
+	text-align: center;
+	opacity: 0.6;
+
+	&:before {
+		content: '';
+		// use the linear-gradient for the fading effect
+		// use a solid background color for a solid bar
+		background: linear-gradient(to right, transparent, #818078, transparent);
+		position: absolute;
+		left: 0;
+		top: 50%;
+		width: 100%;
+		height: 1px;
+	}
+
+	&:after {
+		content: attr(data-content);
+		position: relative;
+		display: inline-block;
+		color: black;
+		padding: 0 .5em;
+		line-height: 1.5em;
+		// this is really the only tricky part, you need to specify the background color of the container element...
+		color: #818078;
+		background-color: #fcfcfa;
+	}
+}
+
+.hr2 {
+	&:before {
+		height: 2px;
+	}
+}
+
+
+.hr3 {
+	&:before {
+		height: 3px;
+	}
+}
+
+
+.popup-container, .dialog-container {
+	padding: 21px;
+
+	.header {
+		text-align: center;
+		margin: 13px 0;
+
+		img {
+			width: 96px;
+			height: 96px;
+		}
+
+		p, strong {
+			text-align: center;
+			margin: 0 8px;
+		}
+	}
+
+	.body {
+		padding: 21px;
+	}
+
+}

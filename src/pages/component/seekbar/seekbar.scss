@@ -1,0 +1,82 @@
+@import '../../ui/functions.scss';
+
+.seekbar-component {
+	min-width: 250px;
+	max-width: 450px;
+	height: 55px;
+	background: val(background-color-2);
+	border-radius: 6px;
+	border: 1px solid val(border-color);
+
+	.container {
+		display: flex;
+		width: 100%;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		vertical-align: central;
+		direction: ltr;
+		text-align: left;
+
+		.input {
+			max-width: 85%;
+			flex-grow: 1;
+			height: 3px;
+			-webkit-appearance: none;
+			border-radius: 6px;
+			background: val(color-simple);
+			outline: none;
+			direction: ltr;
+			text-align: left;
+			cursor: pointer;
+
+
+			&::-webkit-slider-thumb {
+				-webkit-appearance: none;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background: val(color);
+				cursor: pointer;
+				transition: all 0.1s ease;
+
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+
+			&::-moz-range-thumb {
+				width: 16px;
+				height: 16px;
+				border: 0;
+				border-radius: 50%;
+				background: val(color);
+				cursor: pointer;
+				transition: background 0.1s ease;
+
+				&:hover {
+					transform: scale(1.2);
+				}
+			}
+		}
+
+
+		.btn {
+			margin: 0 4px;
+			background: val(background-color-1);
+			border: solid 1px val(border-color);
+			padding: 6px;
+			border-radius: 50%;
+		}
+
+		.minus {
+			width: 32px;
+			height: 32px;
+		}
+
+		.plus {
+			width: 32px;
+			height: 32px;
+		}
+	}
+}

@@ -1,0 +1,13 @@
+
+@function val($key) {
+	@return var(--#{$key});
+}
+
+
+@mixin rotate($degree) {
+	-webkit-transform: rotate(#{$degree}deg);
+	-moz-transform: rotate(#{$degree}deg);
+	-ms-transform: rotate(#{$degree}deg);
+	-o-transform: rotate(#{$degree}deg);
+	transform: rotate(#{$degree}deg);
+}

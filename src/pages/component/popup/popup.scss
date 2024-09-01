@@ -1,0 +1,136 @@
+@import '../../ui/functions.scss';
+
+@media only screen and (min-width: 750px) {
+	/* For desktop */
+	.popup-component {
+
+		.popup-center {
+			width: 65%;
+
+			.body {
+
+				.popup-container {
+					min-height: 400px;
+				}
+			}
+		}
+	}
+
+	.dialog-component {
+
+		.popup-center {
+			width: 50%;
+
+			.popup-container {
+				min-height: 250px;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	/* For tablets and phone*/
+	.popup-component {
+
+		.popup-center {
+			width: 100%;
+
+			.body {
+
+				.popup-container {
+					min-height: 400px;
+				}
+			}
+		}
+	}
+
+
+	.dialog-component {
+
+		.popup-center {
+			width: 85%;
+
+			.popup-container {
+				min-height: 250px;
+			}
+		}
+	}
+}
+
+
+.popup-component {
+	.center {
+		max-width: 850px;
+	}
+}
+
+.dialog-component {
+	.center {
+		max-width: 550px;
+	}
+}
+
+.popup-component, .dialog-component {
+	visibility: hidden;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	background-color: rgba(0,0,0,0.2);
+
+	.popup-center {
+		min-width: 320px;
+		margin: 0 auto;
+		position: fixed;
+		// transform: translate(-50%, -50%);
+		// top: 50%;
+		// left: 50%;
+		box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.5);
+		//overscroll-behavior: contain; //prevent parent scroll - Not work - Problem with this solution is that it only works if overlay is scrollable
+
+		.popup-header {
+			height: 38px;
+			position: relative;
+			-webkit-user-select: none;
+			-html-user-select: none;
+			-moz-user-select: none;
+			-o-user-select: none;
+			user-select: none;
+			direction: rtl;
+			text-align: right;
+
+			img {
+				margin-right: 10px;
+				position: absolute;
+				top: 0;
+			}
+		}
+
+		.popup-body {
+			width: 100%;
+			overflow: auto;
+			max-height: calc(100vh - 38px); // IMPOTANT to have height to overflow work
+			background-color: val(background-color-1);
+			border-top: none;
+			direction: ltr;
+
+			backdrop-filter: contrast(105%) brightness(98%) blur(2px);
+			background-clip: padding-box; /* Background stops at border */
+			border: 6px solid rgba(255,255,255,.12);
+			border-top: none;
+			// -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+			// -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+			// -khtml-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+			// box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.4);
+
+
+			.popup-container {
+				width: 100%;
+				padding: 0;
+				max-width: none;
+			}
+		}
+	}
+}

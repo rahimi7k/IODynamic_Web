@@ -1,0 +1,58 @@
+@import '../../ui/functions.scss';
+
+.list-component {
+	height: 100%;
+	width: 100%;
+	border: 1px solid val(border-color);
+	background-color: val(background-color-1);
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	.list-container {
+		width: 100%;
+		min-height: 100%;
+		margin: 0 auto;
+		//display: flex;
+		//justify-content: flex-end;
+		//flex-direction: column;
+
+
+		.item-block {
+
+			.item {
+				width: 100%;
+				border-bottom: val(itemBorderBottom);
+			}
+		}
+	}
+
+	.wait-container {
+		width: 100%;
+		height: 100%;
+		margin: 0 auto;
+		text-align: center;
+
+		.wait {
+			display: inline-block;
+			margin-top: 5%;
+
+			.img {
+				svg {
+					height: 70px;
+					width: 70px;
+				}
+			}
+		}
+	}
+
+	.empty-container {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+
+		p {
+			display: inline-block;
+			margin-top: 5%;
+		}
+	}
+}

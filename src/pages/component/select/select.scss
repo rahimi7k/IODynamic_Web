@@ -1,0 +1,142 @@
+@import '../../ui/functions.scss';
+
+
+.select-component {
+	position: relative;
+	z-index: 10;
+	display: inline-block;
+
+	$width: 280px;
+	$height: 55px;
+
+	.select-button {
+		width: $width;
+		height: $height;
+		background-color: val(color);
+		border: 1px solid val(border-color);
+		border-radius: 6px;
+		cursor: pointer;
+		outline: none;
+		align-items: center;
+
+		.button-container {
+
+			.select-img {
+				width: 32px;
+				height: 32px;
+				display: inline;
+				margin: 0 5px;
+			}
+
+			.arrow {
+				width: 20px;
+				height: 20px;
+			}
+
+			.text-container {
+				display: inline;
+				margin: 0 10px;
+
+				p {
+					display: inline-block; // --> very important
+					width: 180px;
+					white-space: nowrap; // --> make paragraph only 1 line
+					text-overflow: ellipsis; // --> create ...
+					overflow: hidden; // --> this line should use with text-overflow: ellipsis to create ...
+					color: #fefefe;
+					//word-break: break-word;
+					//display: -webkit-box;
+					//line-clamp: 1;
+					//max-height: 32px; /* fallback */
+					//-webkit-line-clamp: 1; /* number of lines to show */
+					//-webkit-box-orient: vertical;
+				}
+			}
+
+			.load {
+				position: absolute;
+				top: 0px;
+			}
+		}
+	}
+
+	.container {
+		position: absolute;
+		top: $height;
+		left: 0;
+		width: $width;
+		height: 220px;
+		display: none;
+		z-index: 12;
+		background-color: val(background-color);
+		border: 1px solid val(border-color);
+		border-radius: 5px;
+
+		.list {
+			height: 100%;
+			width: 100%;
+			overflow-x: hidden;
+			overflow-y: auto;
+
+
+			.item {
+				height: $height;
+				width: $width;
+				cursor: pointer;
+				padding: 8px 13px;
+				border-bottom: 1px solid val(border-color);
+
+				$image-size: 32px;
+
+				img {
+					width: $image-size;
+					height: $image-size;
+				}
+
+				p {
+					display: inline-block; // --> very important
+					margin: 0 5px;
+					color: val(text-color);
+					width: 210px; // --> for safety
+					min-width: 210px;
+					max-width: 210px;
+					// also below 3 line should be togeather to ... and only 1 line work
+					white-space: nowrap; // --> make paragraph only 1 line
+					text-overflow: ellipsis; // --> create ...
+					overflow: hidden; // --> this line should use with text-overflow: ellipsis to create ...
+					// word-wrap: break-word; // no need -- this line break work if width is not enough
+					position: relative;
+					top: 5px;
+				}
+
+				.description {
+					color: gray;
+					margin: 0 calc(#{$image-size} + 13px);
+					font-size: small;
+					position: relative;
+					top: -8px;
+				}
+
+				&:hover {
+					background-image: linear-gradient(rgba(0, 0, 0, 0.13) 0 0);
+				}
+
+				&:active, &:focus {
+					background-image: linear-gradient(rgba(0, 0, 0, 0.13) 0 0);
+				}
+			}
+		}
+
+		.empty {
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			margin: 70px auto;
+
+		}
+	}
+
+	.show {
+		display: block;
+	}
+}
