@@ -4,14 +4,20 @@ The following project is a state-of-the-art framework used to create final versi
 
 **Run**:
 Create a .bat file and include following code:
+
 cd [C://Path/To/The/Source/Code]
+
 npm run development
+
 pause
 
 
 **Install**:
+
 npm install --global typescript
+
 or
+
 npm install --save-dev typescript
 
 If you use the --global option, then the TypeScript compiler tsc will be available in all projects on the same machine. It will also be available as a terminal command, but it will not be added to your package.json file. Therefore, if you share your code with others, TypeScript will not be installed when another person gets your code and runs npm install.
