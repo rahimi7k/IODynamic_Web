@@ -1,13 +1,13 @@
 # IODynamic_Web
 The following project is a state-of-the-art framework used to create final version of IODynamic website coded by Typescript/Scss without any external dependency or frameworks.
 
-\r\n\r\n
+
 **Run**:
 Create a .bat file and include following code:
 cd [C://Path/To/The/Source/Code]
 npm run development
 pause
-\r\n\r\n
+
 
 **Install**:
 npm install --global typescript
