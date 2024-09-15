@@ -3,7 +3,7 @@ The following project is a state-of-the-art framework used to create final versi
 
 ------------------------------
 **Run**:
-Create a .bat file and include following code:
+Create a .bat file and include the following code:
 
 cd [C://Path/To/The/Source/Code]
 
@@ -13,6 +13,7 @@ pause
 
 ------------------------------
 **Install**:
+Use the following command line to install typescript:
 
 npm install --global typescript
 
